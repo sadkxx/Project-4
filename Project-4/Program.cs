@@ -20,14 +20,14 @@ class Program
             int deger = Convert.ToInt16(girdi);
             switch (deger)
             {
-                case 1: Console.Clear(); fonk1(); sorgu(); break;
-                case 2: Console.Clear(); fonk2(); sorgu(); break;
-                case 3: Console.Clear(); fonk3(); sorgu(); break;
-                case 4: Console.Clear(); fonk4(); sorgu(); break;
-                case 5: Console.Clear(); fonk5(); sorgu(); break;
-                case 6: Console.Clear(); fonk6(); sorgu(); break;
-                case 7: Console.Clear(); fonk7(); sorgu(); break;
-                case 8: Console.Clear(); fonk8(); sorgu(); break;
+                case 1: Console.Clear(); fonk1(); break;
+                case 2: Console.Clear(); fonk2(); break;
+                case 3: Console.Clear(); fonk3(); break;
+                case 4: Console.Clear(); fonk4(); break;
+                case 5: Console.Clear(); fonk5(); break;
+                case 6: Console.Clear(); fonk6(); break;
+                case 7: Console.Clear(); fonk7(); break;
+                case 8: Console.Clear(); fonk8(); break;
                 default: Console.Clear(); Console.WriteLine("Hatalı Seçim Yaptınız! Lütfen 1-4 arası seçim yapınız."); Main(); break;
             }
         }
@@ -56,7 +56,7 @@ class Program
         if (cevap == 'h' || cevap == 'H')
         {
             Console.WriteLine("Program 3 saniye içinde kapanacaktır.\nHoşçakalın ! ");
-            Thread.Sleep(500);
+            Thread.Sleep(3000);
             Environment.Exit(0);
         }
         else if (cevap == 'e' || cevap == 'E')
@@ -86,6 +86,7 @@ class Program
         {
             return (taban * yukseklik) / 2;
         }
+        tekrar(fonk1);
     }
 
     static void fonk2()
@@ -103,6 +104,7 @@ class Program
             }
             return enBuyuk;
         }
+        tekrar(fonk2);
     }
 
     static void fonk3()
@@ -116,6 +118,7 @@ class Program
         Console.WriteLine("İki int sayının toplamı: " + CalculateSum(5, 10));
         Console.WriteLine("İki double sayının toplamı: " + CalculateSum(5.5, 10.2));
         Console.WriteLine("Üç int sayının toplamı: " + CalculateSum(3, 7, 2));
+        tekrar(fonk3);
     }
 
     //FONKSİYON 3'ÜN METOTLARI
@@ -148,6 +151,7 @@ class Program
             if (n <= 1) return n;
             else return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
+        tekrar(fonk4);
     }
 
     static void fonk5()
@@ -186,6 +190,7 @@ class Program
 
             return total / numbers.Length;
         }
+        tekrar(fonk5);
     }
 
     static void fonk6()
@@ -214,6 +219,7 @@ class Program
             }
             return total;
         }
+        tekrar(fonk6);
     }
 
     static void fonk7()
@@ -237,7 +243,7 @@ class Program
         {
             return age - 18;
         }
-
+        tekrar(fonk7);
     }
 
     static void fonk8()
@@ -264,6 +270,7 @@ class Program
 
             return filtreliler;
         }
+        tekrar(fonk8);
     }
 
 }
